@@ -16,7 +16,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
 <link rel="preload" href="font/dm-sans.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="style.css?v=3">
+<link rel="stylesheet" href="style.css?v=4">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -56,33 +56,39 @@
 <body>
 <a class="skip" href="#conteudo">Pular para o conteúdo</a>
 
-<main id="conteudo">
-  <section class="hero" id="top" aria-labelledby="titulo">
-    <div class="hero-portrait">
-      <img src="img/retrato.jpg" width="704" height="1316" alt="Retrato do advogado Kelvis Antônio" fetchpriority="high">
+<header class="site-header" id="top">
+  <div class="wrap header-inner">
+    <div class="brand" translate="no">
+      <span class="monogram" aria-hidden="true"><span>K</span><span>A</span></span>
+      <div>Kelvis Antônio<small>Advogado</small></div>
     </div>
+    <nav class="site-nav" aria-label="Navegação principal">
+      <a href="#areas">Áreas de atuação</a>
+      <a href="#escritorio">Escritório</a>
+      <a href="#midia">Na mídia</a>
+    </nav>
+  </div>
+</header>
+
+<main id="conteudo" tabindex="-1">
+  <section class="hero" aria-labelledby="titulo">
     <div class="wrap hero-inner">
       <div class="hero-copy">
-        <div class="brand" translate="no">
-          <span class="monogram" aria-hidden="true"><span>K</span><span>A</span></span>
-          <div>Kelvis Antônio<small>Advogado</small></div>
-        </div>
-        <h1 id="titulo">Advocacia em Maceió. <br><em>Atuação nacional.</em></h1>
+        <h1 id="titulo"><span>Advocacia em Maceió.</span> <em>Atuação nacional.</em></h1>
         <p class="hero-lead">Orientação e atuação em demandas administrativas e judiciais.</p>
-        <ul class="hero-list">
-          <li>Direito Trabalhista</li>
-          <li>Direito Previdenciário</li>
-          <li>Direito Criminal e Cível</li>
-        </ul>
+        <p class="hero-credentials">OAB/AL 20333 · OAB/PE 69472</p>
         <div class="hero-actions">
-          <p>Kelvis Antônio<br><span>OAB/AL 20333 · OAB/PE 69472</span></p>
           <a class="button" href="https://wa.me/5582994359080" target="_blank" rel="noopener">Contato pelo WhatsApp</a>
+          <a class="jump-link" href="#areas">Ver áreas de atuação</a>
         </div>
+      </div>
+      <div class="hero-portrait">
+        <img src="img/retrato.jpg" width="704" height="1316" alt="Retrato do advogado Kelvis Antônio" fetchpriority="high">
       </div>
     </div>
   </section>
 
-  <section class="wrap quick" aria-labelledby="atendimento-title">
+  <section class="wrap quick" id="areas" aria-labelledby="atendimento-title">
     <h2 id="atendimento-title">Atendimento <em>jurídico.</em></h2>
     <ul class="quick-links">
       <li><a href="#trabalhista"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.45" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="5" width="14" height="16" rx="1"/><path d="M9 3h6v4H9zm0 9h6m-6 4h6"/></svg><span>Direito Trabalhista</span></a></li>
@@ -150,19 +156,20 @@
 
         </address>
       </div>
-      <div class="location-art">
-        <a class="directions" href="https://www.google.com/maps/search/?api=1&amp;query=-9.5719726%2C-35.7601103" target="_blank" rel="noopener">
-          <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.45" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg>
-          <span>Como chegar<small>Tabuleiro do Martins · Maceió, AL</small></span>
-        </a>
-      </div>
+      <figure class="location-art">
+        <img src="img/fachada-placa-sm.jpg" alt="Placa do escritório de Kelvis Antônio no Tabuleiro do Martins" width="700" height="347" loading="lazy">
+        <figcaption>
+          <a class="directions" href="https://www.google.com/maps/search/?api=1&amp;query=-9.5719726%2C-35.7601103" target="_blank" rel="noopener">
+            <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.45" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg>
+            <span>Como chegar<small>Tabuleiro do Martins · Maceió, AL</small></span>
+          </a>
+        </figcaption>
+      </figure>
     </div>
   </section>
 
   <section class="wrap media" id="midia" aria-labelledby="midia-title">
-    <div class="media-heading">
-      <h2 id="midia-title">Na mídia e <em>no escritório.</em></h2>
-    </div>
+    <h2 id="midia-title">Na <em>mídia.</em></h2>
     <div class="videos">
       <article>
         <div class="photo">
@@ -180,24 +187,16 @@
           <h3>Gravação no escritório</h3>
         </div>
       </article>
-      <article>
-        <div class="photo">
-          <div class="video-image">
-            <img src="img/fachada-placa-sm.jpg" alt="Placa do escritório de Kelvis Antônio no Tabuleiro do Martins" width="700" height="347" loading="lazy">
-          </div>
-          <h3>Fachada do escritório</h3>
-        </div>
-      </article>
     </div>
   </section>
 
   <section class="profile" aria-labelledby="perfil-title">
-    <div class="profile-art">
-      <img src="img/entrevista-tv-sm.jpg" alt="Kelvis Antônio durante uma entrevista" width="700" height="462" loading="lazy">
-    </div>
     <div class="wrap profile-inner">
+      <div>
+        <h2 id="perfil-title">Kelvis Antônio</h2>
+        <p class="profile-role">Advogado · OAB/AL 20333 · OAB/PE 69472</p>
+      </div>
       <div class="profile-copy">
-        <h2 id="perfil-title">Kelvis Antônio<span class="profile-role">Advogado · OAB/AL 20333 · OAB/PE 69472</span></h2>
         <p>Kelvis Antônio da Silva é advogado com inscrições em Alagoas e Pernambuco. Seu escritório fica em Maceió e atende em todo o Brasil.</p>
         <p>O atendimento é conduzido pelo próprio advogado, que ouve o relato e analisa os documentos de cada caso.</p>
       </div>
